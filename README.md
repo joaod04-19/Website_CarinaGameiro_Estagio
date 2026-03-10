@@ -7,7 +7,9 @@ O website foi desenvolvido no âmbito de um estágio curricular e tem como objet
 
 # Tecnologias Utilizadas
 . HTML;
+
 . CSS;
+
 . JavaScript;
 
 # Estrutura do Website
