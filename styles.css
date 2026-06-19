@@ -1,18 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background: #f2f2f2;
-  color: #2b2b2b;
-  line-height: 1.6;
-}
-
-
-/* Cores base do WebSite */
+/* ====================================
+   CONFIGURAÇÕES & COMPONENTES GERAIS
+======================================= */
 :root {
   --primary: #8B5A6A;
   --secondary: #C6A0AC;
@@ -20,52 +8,30 @@ body {
   --dark: #2b2b2b;
 }
 
-
-/* Estilos para o header */
-header {
-  min-height: 100vh;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  text-align: center;
-  background: linear-gradient(180deg,
-      #ffffff 0%,
-      #f6f6f6 100%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.logo {
-  max-width: 280px;
-  width: 100%;
-  animation: fadeIn 1.2s ease forwards;
+html {
+  scroll-behavior: smooth;
 }
 
-
-/* Secções */
-.section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
+body {
+  background: #f2f2f2;
+  color: var(--dark);
+  line-height: 1.6;
 }
 
-.section h2 {
-  font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 20px;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.section p {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  font-size: 1rem;
-  color: #444;
-}
-
-
-/* Botões */
+/* BOTÕES DO WEBSITE */
 .btn-primary,
 .btn-secondary {
   display: inline-block;
@@ -100,405 +66,34 @@ header {
 }
 
 
-/* Página Sobre */
-.page-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 40px 20px 20px;
+/* ========================================================================================
+   CTA - TODAS AS PÁGINAS (servicos.html; sobre.html; atendimento.html; testemunhos.html)
+=========================================================================================== */
+.cta {
+  padding: 100px 20px;
   text-align: center;
+  background: #f7f7f7;
 }
 
-.page-header h1 {
+.cta h2 {
+  font-size: 2rem;
   color: var(--primary);
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.back-link {
-  color: var(--primary);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-.sobre-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.page-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-.sobre-foto img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  animation: fadeInUp 1s ease forwards;
-}
-
-.sobre-texto p {
-  margin-bottom: 20px;
-  color: #444;
-  animation: fadeInUp 1.2s ease forwards;
-}
-
-.intro-text {
-  max-width: 700px;
-  margin: 0 auto 50px;
-  text-align: center;
-  color: white;
-  line-height: 1.6;
-}
-
-
-/* Footer */
-.footer {
-  background: #f6f2f4;
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 0.85rem;
+.cta p {
+  margin-bottom: 30px;
   color: #555;
 }
 
 
-/* Animações */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .sobre-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .logo {
-    max-width: 220px;
-  }
-
-  .section h2 {
-    font-size: 1.6rem;
-  }
-}
-
-
-/* Cartões de serviços com imagem + hover */
-
-/* Container principal dos serviços */
-.servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-
-/* Cards dos serviços */
-.servico-card {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  /* Mantém quadrado */
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(139, 90, 106, 0.15);
-}
-
-
-/* Imagem dos Cards */
-.card-image {
-  width: 100%;
-  height: 100%;
-  /* Ocupa 100% da altura do card */
-  background-size: cover;
-  /* Cobre todo o espaço */
-  background-position: center;
-  /* Centraliza a imagem */
-  background-repeat: no-repeat;
-  position: relative;
-  transition: transform 0.4s ease;
-}
-
-
-.card-image::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  /* Só na parte inferior */
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.4) 50%,
-      transparent 100%);
-  z-index: 1;
-}
-
-
-/* Título no card */
-.card-image h3 {
-  position: absolute;
-  bottom: 20px;
-  /* Distância do fundo */
-  left: 0;
-  right: 0;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 15px 10px;
-  margin: 0;
-  z-index: 2;
-  line-height: 1.3;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(139, 90, 106, 0.95);
-  color: white;
-  padding: 30px 20px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-}
-
-.card-overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.card-overlay li {
-  padding: 8px 0;
-  font-size: 0.9rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.card-overlay li:last-child {
-  border-bottom: none;
-}
-
-
-/* MOBILE - SERVIÇOS CARD OVERLAY */
-@media (max-width: 768px) {
-
-  .servico-card {
-    aspect-ratio: auto;
-    height: 260px;
-  }
-
-  .card-overlay {
-    padding: 20px;
-    justify-content: center;
-  }
-
-  .card-overlay ul {
-    width: 100%;
-  }
-
-  .card-overlay li {
-    font-size: 0.95rem;
-    padding: 10px 0;
-    text-align: center;
-  }
-}
-
-
-/* Hover */
-.servico-card:hover .card-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.servico-card:hover .card-image {
-  transform: scale(1.05);
-}
-
-
-/* Responsividade para quadrados pequenos */
-@media (max-width: 768px) {
-  .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .servico-card {
-    height: 200px;
-    /* Menor em mobile */
-  }
-}
-
-/* ANIMAÇÕES */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* HEADER */
-.header-scrolled {
-  backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-}
-
-/* RODAPÉ */
-.site-footer {
-  background: #8B5A6A;
-  color: #fff;
-  padding-top: 70px;
-}
-
-.footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px 60px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  align-items: start;
-}
-
-.footer-col h3 {
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #C6A0AC;
-}
-
-.footer-col h4 {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  font-weight: 500;
-  opacity: 0.8;
-}
-
-.footer-col p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.footer-title {
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-/* SOCIAL */
-.footer-socials {
-  margin-top: 25px;
-  display: flex;
-  gap: 15px;
-}
-
-.footer-socials a {
-  width: 45px;
-  height: 45px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-.footer-socials a:hover {
-  background: white;
-  color: var(--primary);
-  transform: translateY(-4px);
-}
-
-/* BOTTOM */
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.15);
-  text-align: center;
-  padding: 20px;
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .footer-socials {
-    justify-content: center;
-  }
-
-}
-
-
-/* HERO HEADER COM IMAGEM */
-.page-hero {
+/* =======================================================================================================
+   HEADER - TODAS AS PÁGINAS (index.html; servicos.html; sobre.html; atendimento.html; testemunhos.html)
+========================================================================================================== */
+.header {
   position: relative;
   min-height: 60vh;
   background-size: cover;
@@ -510,120 +105,378 @@ header {
   overflow: hidden;
 }
 
-.hero-overlay {
+.header-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45));
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
 }
 
-.hero-content {
+/* (index.html) */
+.header-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: white;
+  line-height: 1.6;
+}
+
+/* (index.html) */
+.header-logo {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+  max-width: 280px;
+  width: 100%;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* (servicos.html; sobre.html; atendimento.html; testemunhos.html) */
+.header-content {
   position: relative;
   z-index: 1;
   color: #C6A0AC;
   padding: 20px;
 }
 
-.hero-content h1 {
+.header-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  color: #C6A0AC;
 }
 
-.hero-content .btn-secondary {
+.header-content .btn-secondary {
   background: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
 }
 
-.hero-content .btn-secondary:hover {
+.header-content .btn-secondary:hover {
   background: white;
   color: var(--primary);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .page-hero {
-    min-height: 45vh;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-}
 
 
-/* PAGINA DE AGENDAMENTO (Agendar Consulta) */
-.agendamento {
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =========================
+   MENU - PÁGINA PRINCIPAL
+============================ */
+.menu {
   padding: 80px 20px;
-  background: #f7f7f7;
-}
-
-.agendamento-container {
   max-width: 1100px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.agendamento-form {
-  background: #fff;
+.menu h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.menu-btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ===============================================
+   TESTEMUNHOS - PÁGINA PRINCIPAL + (index.html)
+================================================== */
+.testimonials {
+  padding: 80px 20px;
+  background: #f7f3f4;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.testimonials p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin: 15px 0;
+  color: #444;
+}
+
+.testimonial-card .author {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.stars {
+  color: #f5b301;
+  font-size: 1.2rem;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ===========================
+   RODAPÉ - TODAS AS PÁGINAS
+============================== */
+.footer {
+  background: #8B5A6A;
+  color: #fff;
+  padding-top: 70px;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
+.footer-left h3,
+.footer-right h3 {
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.footer-socials {
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ===================================
+   PÁGINA - SERVIÇOS (servicos.html)
+====================================== */
+.services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service-content h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.service-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-content li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.service-content li i {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* =================================
+   PÁGINA - SOBRE MIM (sobre.html)
+==================================== */
+.about-me {
+  padding: 80px 0;
+}
+
+.about-me .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+}
+
+.about-me-photo {
+  text-align: center;
+}
+
+.about-me-photo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-me-text p {
+  margin-bottom: 20px;
+  color: #444;
+  text-align: justify;
+}
+
+
+/* ============================================================================================================================= */
+/* ============================================================================================================================= */
+
+/* ==============================================
+   PÁGINA - AGENDAR CONSULTA (atendimento.html)
+================================================= */
+.appointment {
+  padding: 80px 0;
+}
+
+.appointment-form {
+  background: white;
   padding: 50px;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-.agendamento-form h2 {
+.appointment-form h2 {
   margin-bottom: 10px;
+  color: var(--primary);
 }
 
-.agendamento-form p {
+.appointment-form p {
   margin-bottom: 30px;
   color: #666;
 }
 
-.agendamento-form label {
-  font-weight: 500;
-  margin-top: 15px;
+.appointment-form label {
   display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
-.agendamento-form input,
-.agendamento-form select,
-.agendamento-form textarea {
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
   width: 100%;
   padding: 12px 14px;
-  border-radius: 8px;
   border: 1px solid #ccc;
-  margin-top: 6px;
+  border-radius: 8px;
   font-family: inherit;
 }
 
-.form-grid {
+.appointment-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.form-grid div:not(.checkbox-group) {
+.appointment-grid div {
   display: flex;
   flex-direction: column;
 }
 
-
-@media (max-width: 768px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .agendamento-form {
-    padding: 30px;
-  }
+.massage-width {
+  grid-column: 1 / -1;
 }
 
-/* Checkbox alinhado corretamente */
 .checkbox-group {
-  grid-column: 1 / -1;
-  margin: 15px 0;
-  display: block;
-  width: 100%;
+  margin: 20px 0;
 }
 
 .checkbox-group label {
@@ -633,135 +486,94 @@ header {
 }
 
 .checkbox-group input[type="checkbox"] {
+  width: auto;
   margin: 0;
 }
 
-.note-whatsapp {
-  margin: 20px 0 10px;
-  font-size: 0.9rem;
-  color: #666;
+.whatsapp-note {
+  margin: 20px 0;
+  padding: 15px;
   background: #f6f2f4;
-  padding: 12px 16px;
   border-left: 4px solid var(--primary);
   border-radius: 8px;
-}
-
-
-/* TESTEMUNHOS */
-.testemunhos {
-  padding: 80px 20px;
-  background: #f7f3f4;
-  text-align: center;
-}
-
-.testemunhos h2 {
-  margin-bottom: 40px;
-  font-size: 2rem;
-  color: var(--primary);
-}
-
-.testemunhos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.testemunho-card {
-  background: white;
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
-  position: relative;
-}
-
-.testemunho-card:hover {
-  transform: translateY(-5px);
-}
-
-.testemunho-card .texto {
-  font-style: italic;
-  margin: 15px 0;
-  color: #444;
-}
-
-.testemunho-card .autor {
-  font-weight: 600;
-  color: var(--primary);
   font-size: 0.9rem;
-}
-
-.estrelas {
-  color: #f5b301;
-  /* dourado */
-  font-size: 1.2rem;
+  color: #666;
 }
 
 
-/* CTA - SERVIÇOS */
-.cta-section {
-  padding: 100px 20px;
-  text-align: center;
-  background: #f7f7f7;
-}
-
-.cta-section h2 {
-  font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 15px;
-}
-
-.cta-section p {
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.cta-section .btn-primary {
-  display: inline-block;
-  margin-top: 20px;
-}
-
-
-/* AJUSTES MOBILE - MENU */
+/* ==============================
+   RESPONSIVO - TABLET E MOBILE
+================================= */
 @media (max-width: 768px) {
 
-  .menu-buttons {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 20px; /* Espaçamento entre os botões */
-    margin-top: 30px; 
+  .container {
+    padding: 0 20px;
   }
-}
 
-/* AJUSTES MOBILE - SERVIÇOS */
-@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
 
-  .servicos-grid {
+  .about-me .container {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
+    text-align: center;
   }
 
-  .servico-card {
-    aspect-ratio: auto;
+  .about-me-photo img {
+    max-width: 300px;
   }
 
-  .card-image {
-    height: 200px;
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
   }
 
-  .card-overlay {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
+  .service-image,
+  .service-content {
+    width: 100%;
   }
 
-  .servico-card.active .card-overlay {
-    opacity: 1;
-    transform: translateY(0);
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 
+  .appointment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-form {
+    padding: 30px 20px;
+  }
+
+  .cta {
+    padding: 60px 20px;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+  }
 }

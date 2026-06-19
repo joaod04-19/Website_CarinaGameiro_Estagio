@@ -2,8 +2,8 @@
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar Consulta | Carina Gameiro</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -12,29 +12,41 @@
 
 <body>
 
-    <header class="page-hero" style="background-image: url('assets/consultaonline.jpeg');">
-        <div class="hero-overlay"></div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-        <div class="hero-content">
-            <h1>Agendar Consulta</h1>
-            <a href="index.html" class="btn-secondary">Voltar à página inicial</a>
+    <header class="header" style="background-image: url('assets/consultaonline.jpeg');">
+
+        <div class="header-overlay"></div>
+
+        <div class="container">
+
+            <div class="header-content">
+                <h1>Agendar Consulta</h1>
+                <a href="index.html" class="btn-secondary">Voltar à página inicial</a>
+            </div>
+
         </div>
+
     </header>
 
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <section class="agendamento">
-        <div class="agendamento-container">
+    <section class="appointment">
 
-            <form class="agendamento-form" id="formWhatsapp">
+        <div class="container">
+
+            <form class="appointment-form" id="formWhatsapp">
 
                 <h2>Entre em Contacto Connosco</h2>
                 <p>Respondemos em menos de 24 horas.</p>
 
-                <div class="form-grid">
+                <div class="appointment-grid">
 
                     <div>
-                        <label for="consulta">Regime de Consulta</label>
-                        <select id="consulta" required>
+                        <label for="consultation">Regime de Consulta</label>
+                        <select id="consultation" required>
                             <option value="">Escolha uma Opção</option>
                             <option>Presencial</option>
                             <option>Online</option>
@@ -55,8 +67,8 @@
                     </div>
 
                     <div>
-                        <label for="urgencia">Nível de Urgência</label>
-                        <select id="urgencia" required>
+                        <label for="urgency">Nível de Urgência</label>
+                        <select id="urgency" required>
                             <option value="">Escolha uma Opção</option>
                             <option>Normal</option>
                             <option>Urgente</option>
@@ -64,8 +76,8 @@
                     </div>
 
                     <div>
-                        <label for="nome">Nome</label>
-                        <input id="nome" type="text" placeholder="Digite o seu Nome (Primeiro/Último)" required>
+                        <label for="name">Nome</label>
+                        <input id="name" type="text" placeholder="Digite o seu Nome (Primeiro/Último)" required>
                     </div>
 
                     <div>
@@ -74,25 +86,24 @@
                     </div>
 
                     <div>
-                        <label for="telemovel">Telemóvel</label>
-                        <input id="telemovel" type="tel" placeholder="Digite o seu Contacto" required>
+                        <label for="phone">Telemóvel</label>
+                        <input id="phone" type="tel" placeholder="Digite o seu Contacto" required>
                     </div>
 
-                    <div style="grid-column: 1 / -1;">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" rows="4" placeholder="Explique o seu Pedido"></textarea>
+                    <div class="massage-width">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="4" placeholder="Descreva o seu Pedido"></textarea>
                     </div>
 
                 </div>
 
                 <div class="checkbox-group">
                     <label>
-                        <input type="checkbox" required>
-                        Aceito a política de privacidade e RGPD.
+                        <input type="checkbox" required> Aceito a política de privacidade e RGPD.
                     </label>
                 </div>
 
-                <p class="note-whatsapp">
+                <p class="whatsapp-note">
                     <strong>IMPORTANTE:</strong> Ao clicar em <strong>Enviar Pedido</strong>, será direcionado/a para o
                     WhatsApp da Solicitadora.
                     No WhatsApp, terá de clicar novamente em <strong>Enviar</strong> para concluir o pedido.
@@ -104,50 +115,12 @@
                 <button type="submit" class="btn-primary">Enviar Pedido</button>
 
             </form>
-
         </div>
+
     </section>
 
-    <footer class="site-footer">
-        <div class="footer-container">
-
-            <div class="footer-col">
-                <h3>LOCALIZAÇÃO</h3>
-
-                <div class="contact-text">
-                    <p class="footer-title">Ninho de Empresas</p>
-                    <p>Parque de Empresas, lote 24<br />7900-133 Ferreira do Alentejo, Portugal</p>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>CONTACTOS</h3>
-
-                <div class="contact-text">
-                    <h4>Email</h4>
-                    <p>carina_mgameiro@hotmail.com</p>
-                </div>
-
-                <div class="contact-text">
-                    <h4>Telemóvel</h4>
-                    <p>+351 964 360 936</p>
-                </div>
-
-                <div class="footer-socials">
-                    <a href="https://www.instagram.com/carinagameiro.solicitadora/" target="_blank"
-                        aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>Carina Gameiro | Solicitadora © 2026. Todos os Direitos Reservados</p>
-        </div>
-
-    </footer>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <script src="script.js"></script>
 

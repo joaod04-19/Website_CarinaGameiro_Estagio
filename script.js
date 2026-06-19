@@ -1,49 +1,32 @@
+/* ===========================================
+  FORMULÁRIO DE WHATSAPP (atendimento.html)
+============================================== */
 document.addEventListener("DOMContentLoaded", function () {
 
-  console.log("JS inicializado");
-
-  // Animação reveal
-  const elements = document.querySelectorAll(".reveal");
-  elements.forEach(el => {
-    el.classList.add("show");
-  });
-
-  // Serviços - Mobile
-  if (window.innerWidth <= 768) {
-    const cards = document.querySelectorAll(".servico-card");
-
-    cards.forEach(card => {
-      card.addEventListener("click", function () {
-        this.classList.toggle("active");
-      });
-    });
-  }
-
-  // WhatsApp
   const form = document.getElementById("formWhatsapp");
 
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nome = document.getElementById("nome").value;
+      const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
-      const telemovel = document.getElementById("telemovel").value;
-      const consulta = document.getElementById("consulta").value;
+      const phone = document.getElementById("phone").value;
+      const consultation = document.getElementById("consultation").value;
       const area = document.getElementById("area").value;
-      const urgencia = document.getElementById("urgencia").value;
-      const mensagem = document.getElementById("mensagem").value;
+      const urgency = document.getElementById("urgency").value;
+      const message = document.getElementById("message").value;
 
-      const texto = `Olá, o meu nome é ${nome}, gostaria de marcar uma consulta consigo.
-        Regime de Consulta: ${consulta}.
+      const text = `Olá, o meu nome é ${name}, gostaria de marcar uma consulta consigo.
+        Regime de Consulta: ${consultation}.
         Área de Apoio: ${area}.
-        Urgência: ${urgencia}.
-        Telemóvel: ${telemovel}.
+        Urgência: ${urgency}.
+        Telemóvel: ${phone}.
         Email: ${email}.
-        Mensagem: ${mensagem}`;
+        Mensagem: ${message}`;
 
       const numCarina = "351964360936";
-      const url = `https://wa.me/${numCarina}?text=${encodeURIComponent(texto)}`;
+      const url = `https://wa.me/${numCarina}?text=${encodeURIComponent(text)}`;
 
       window.open(url, "_blank");
     });
