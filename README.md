@@ -36,28 +36,28 @@ O principal objetivo deste projeto foi desenvolver um website funcional, organiz
 # Estrutura do Website
 O website é composto pelas seguintes páginas:
 
-. Home (index.html) – Página Principal do Website
+### Home (index.html) – Página Principal do Website
     . Apresentação da Atividade Profissional;
     . Menu de Navegação;
     . Testemunhos de Clientes;
     . Acesso Rápido às Restantes Páginas;
 
-. Sobre (sobre.html) – Apresentação da Profissional
+### Sobre (sobre.html) – Apresentação da Profissional
     - Apresentação Profissional;
     - Formação e Percurso;
     - Informação Pessoal Relevante;
 
-. Serviços (servicos.html) – Descrição dos Serviços Disponíveis
+### Serviços (servicos.html) – Descrição dos Serviços Disponíveis
     - Áreas de Atuação;
     - Descrição dos Serviços Prestados;
     - Organização por Categorias;
 
-. Atendimento (atendimento.html) – informações sobre atendimento e contacto
+### Atendimento (atendimento.html) – informações sobre atendimento e contacto
     - Formulário de Contacto;
     - Integração com WhatsApp;
     - Pedido de Consulta Presencial ou Online;
 
-. Testemunhos (testemunhos.html) – testemunhos de clientes ao serviço prestado
+### Testemunhos (testemunhos.html) – testemunhos de clientes ao serviço prestado
     - Opiniões e Avaliações de Clientes;
     - Classificações Através de Estrelas;
 
