@@ -37,10 +37,10 @@ O principal objetivo deste projeto foi desenvolver um website funcional, organiz
 O website é composto pelas seguintes páginas:
 
 . Home (index.html) – Página Principal do Website
-    - Apresentação da Atividade Profissional;
-    - Menu de Navegação;
-    - Testemunhos de Clientes;
-    - Acesso Rápido às Restantes Páginas;
+    . Apresentação da Atividade Profissional;
+    . Menu de Navegação;
+    . Testemunhos de Clientes;
+    . Acesso Rápido às Restantes Páginas;
 
 . Sobre (sobre.html) – Apresentação da Profissional
     - Apresentação Profissional;
